@@ -1,4 +1,7 @@
 ﻿'Imports System
+'imports windows
+'Imports stdio
+Imports System.Data
 Imports System.IO.Ports
 Imports System.Configuration
 Public Class Form1
@@ -14,8 +17,8 @@ Public Class Form1
     Dim TestLen As Integer
     Dim tramaspia, apatxt, pantxt, timetxt, disttxt As String
 
-    Delegate Sub SetTextCallback(ByVal text As String)
-    Dim DataIn As String = String.Empty
+    ' Delegate Sub SetTextCallback(ByVal text As String)
+    ' Dim DataIn As String = String.Empty
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Strbufferout = ""
@@ -23,7 +26,6 @@ Public Class Form1
         conectar.Enabled = False
         enviardato.Enabled = False
         bufferout.Visible = False
-        txttramarecibida.Visible = True
 
     End Sub
 
@@ -46,7 +48,9 @@ Public Class Form1
         Form2.Show()
         Timer2.Start()
         bufferin.Clear()
-
+        txtpin.Clear()
+        cmbdistancia.Text = ""
+        cmbtiempo.Text = ""
     End Sub
 
     Private Sub determinarconecxion_Click(sender As Object, e As EventArgs) Handles determinarconecxion.Click
@@ -87,37 +91,42 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' Strbufferin = Me.sppuertos.ReadExisting
-        '  If Strbufferin <> "" Then
-        ' tramaspia = Strbufferin
-        stringdesdespia()
-        '  End If
-
-    End Sub
-    Private Sub PtoSerial_DataReceived(ByVal sender As Object, ByVal e As System.IO.Ports.SerialDataReceivedEventArgs) Handles sppuertos.DataReceived
-
-        DataIn = Me.sppuertos.ReadExisting
-        'If DataIn <> String.Empty Then
-        If DataIn <> "" Then
-            SetText(DataIn)
+        Strbufferin = Me.sppuertos.ReadExisting
+        If Strbufferin <> "" Then
+            tramaspia = Strbufferin
+            stringdesdespia()
+            ' DataIn = Strbufferin
+            Me.txttramarecibida.Text = txttramarecibida.Text + Strbufferin
         End If
 
     End Sub
+    '  Private Sub PtoSerial_DataReceived(ByVal sender As Object, ByVal e As System.IO.Ports.SerialDataReceivedEventArgs) Handles sppuertos.DataReceived
 
+    '' copia de la forma 1 pero al ubicarla aca falla
+    '   DataIn = Me.sppuertos.ReadExisting
+    'If DataIn <> String.Empty Then
+    'If DataIn <> "" Then
+    '        SetText(DataIn)
+    'End If
+    '  End Sub
+    '''forma 2 de recepcion serial para el log
+    '''
     ' Recepcion del dato del puerto serie
-    Private Sub SetText(ByVal text As String)
-        If Me.txttramarecibida.InvokeRequired Then
-            Dim d As New SetTextCallback(AddressOf SetText)
-            Me.Invoke(d, New Object() {text})
-        Else
-            Me.txttramarecibida.Text = txttramarecibida.Text + text
-        End If
-    End Sub
+    ' Private Sub SetText(ByVal text As String)
+    '  If Me.txttramarecibida.InvokeRequired Then
+    ' Dim d As New SetTextCallback(AddressOf SetText)
+    '  Me.Invoke(d, New Object() {text})
+    'Else
+    'Me.txttramarecibida.Text = txttramarecibida.Text + text
+    'End If
+    'End Sub
 
 
     Private Sub btnclaro_Click(sender As Object, e As EventArgs) Handles btnclaro.Click
         btnclaro.Enabled = False
-        claro = "claro"
+        btntigo.Enabled = True
+        btnmovistar.Enabled = True
+        btnapnmanual.Enabled = True
     End Sub
 
     Private Sub txtpin_TextChanged(sender As Object, e As EventArgs) Handles txtpin.TextChanged
@@ -125,10 +134,16 @@ Public Class Form1
 
     Private Sub btntigo_Click(sender As Object, e As EventArgs) Handles btntigo.Click
         btntigo.Enabled = False
+        btnclaro.Enabled = True
+        btnmovistar.Enabled = True
+        btnapnmanual.Enabled = True
     End Sub
 
     Private Sub btnmovistar_Click(sender As Object, e As EventArgs) Handles btnmovistar.Click
         btnmovistar.Enabled = False
+        btntigo.Enabled = True
+        btnclaro.Enabled = True
+        btnapnmanual.Enabled = True
     End Sub
 
     Private Sub btnapagado_Click(sender As Object, e As EventArgs) Handles btnapagado.Click
@@ -141,6 +156,7 @@ Public Class Form1
             '   btnapagado.Text = "Apagar"
             '     apagado = "0"
         End If
+        btnencender.Enabled = True
     End Sub
 
     Private Sub btnfinalizarpanico_Click(sender As Object, e As EventArgs) Handles btnfinalizarpanico.Click
@@ -226,6 +242,7 @@ Public Class Form1
         If btnencender.Enabled = False Then
             apagado = "0"
         End If
+        btnapagado.Enabled = True
     End Sub
 
     Private Sub txtlinea_TextChanged(sender As Object, e As EventArgs) Handles txtlinea.TextChanged
@@ -235,8 +252,9 @@ Public Class Form1
     Private Sub btnoffled_Click(sender As Object, e As EventArgs) Handles btnoffled.Click
         btnoffled.Enabled = False
         If btnoffled.Enabled = False Then
-            led = "1"
+            led = "0"
         End If
+        btnonled.Enabled = True
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -260,8 +278,9 @@ Public Class Form1
     Private Sub btnonled_Click(sender As Object, e As EventArgs) Handles btnonled.Click
         btnonled.Enabled = False
         If btnonled.Enabled = False Then
-            led = "0"
+            led = "1"
         End If
+        btnoffled.Enabled = True
     End Sub
 
     Private Sub bufferin_TextChanged(sender As Object, e As EventArgs) Handles bufferin.TextChanged
@@ -270,6 +289,9 @@ Public Class Form1
 
     Private Sub btnapnmanual_Click(sender As Object, e As EventArgs) Handles btnapnmanual.Click
         btnapnmanual.Enabled = False
+        btntigo.Enabled = True
+        btnmovistar.Enabled = True
+        btnclaro.Enabled = True
     End Sub
 
     Private Sub cmbtiempo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbtiempo.SelectedIndexChanged
@@ -282,9 +304,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
-    End Sub
 
     Public Function espacios_apn() As String
         TestLen = Len(txtapnmanual.Text)
@@ -341,10 +361,10 @@ Public Class Form1
 
     Public Function stringdesdespia() As String
         Dim trozos() As String
-        'trozos = tramaspia.Split(",")  ' original 
+        trozos = tramaspia.Split(",")  ' original 
         'trozos = txttramarecibida.Text.Split(",")
         'trozos = DataIn.Split(",")
-        trozos = Split(DataIn, ",")
+        ' trozos = Split(DataIn, ",")
         If trozos(0) = "&" Then
             If trozos(3) = "1" Then
                 disttxt = "500"
@@ -372,11 +392,11 @@ Public Class Form1
             ElseIf trozos(6) = "" Then
                 trozos(6) = "Panico no pulsado"
             ElseIf trozos(6) = "?" Then
-                trozos(6) = "Funcion no implementada"
+                trozos(6) = "Panico finalizado"
             End If
-            If trozos(9) = "1" Then
+            If trozos(9) = "0" Then
                 trozos(9) = "Led deshabilitado"
-            ElseIf trozos(9) = "0" Then
+            ElseIf trozos(9) = "1" Then
                 trozos(9) = "Led habilitado"
             End If
             If trozos(11) = "00" Then

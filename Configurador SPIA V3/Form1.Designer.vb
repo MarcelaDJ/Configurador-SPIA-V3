@@ -63,20 +63,25 @@ Partial Class Form1
         Me.enviardato = New System.Windows.Forms.Button()
         Me.conectar = New System.Windows.Forms.Button()
         Me.determinarconecxion = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtlinea1 = New System.Windows.Forms.TextBox()
+        Me.txtlinea2 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'puertos
         '
         Me.puertos.FormattingEnabled = True
-        Me.puertos.Location = New System.Drawing.Point(1089, 62)
+        Me.puertos.Location = New System.Drawing.Point(929, 30)
         Me.puertos.Name = "puertos"
         Me.puertos.Size = New System.Drawing.Size(87, 21)
         Me.puertos.TabIndex = 3
         '
         'bufferout
         '
-        Me.bufferout.Location = New System.Drawing.Point(454, 381)
+        Me.bufferout.Location = New System.Drawing.Point(376, 536)
         Me.bufferout.Multiline = True
         Me.bufferout.Name = "bufferout"
         Me.bufferout.Size = New System.Drawing.Size(232, 20)
@@ -94,11 +99,11 @@ Partial Class Form1
         Me.bufferin.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.bufferin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bufferin.Font = New System.Drawing.Font("Segoe Print", 10.87!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bufferin.Location = New System.Drawing.Point(487, 405)
+        Me.bufferin.Location = New System.Drawing.Point(724, 161)
         Me.bufferin.Margin = New System.Windows.Forms.Padding(3, 1, 3, 3)
         Me.bufferin.Multiline = True
         Me.bufferin.Name = "bufferin"
-        Me.bufferin.Size = New System.Drawing.Size(232, 247)
+        Me.bufferin.Size = New System.Drawing.Size(176, 301)
         Me.bufferin.TabIndex = 5
         '
         'Label1
@@ -107,7 +112,7 @@ Partial Class Form1
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Segoe Print", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label1.Location = New System.Drawing.Point(42, 124)
+        Me.Label1.Location = New System.Drawing.Point(22, 128)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 26)
         Me.Label1.TabIndex = 6
@@ -116,7 +121,7 @@ Partial Class Form1
         'txtpin
         '
         Me.txtpin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpin.Location = New System.Drawing.Point(86, 124)
+        Me.txtpin.Location = New System.Drawing.Point(66, 128)
         Me.txtpin.MaxLength = 6
         Me.txtpin.Name = "txtpin"
         Me.txtpin.Size = New System.Drawing.Size(104, 23)
@@ -127,7 +132,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label4.Location = New System.Drawing.Point(39, 167)
+        Me.Label4.Location = New System.Drawing.Point(19, 161)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 24)
         Me.Label4.TabIndex = 10
@@ -136,7 +141,7 @@ Partial Class Form1
         'txtlinea
         '
         Me.txtlinea.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtlinea.Location = New System.Drawing.Point(197, 259)
+        Me.txtlinea.Location = New System.Drawing.Point(177, 243)
         Me.txtlinea.MaxLength = 10
         Me.txtlinea.Name = "txtlinea"
         Me.txtlinea.Size = New System.Drawing.Size(77, 23)
@@ -145,7 +150,7 @@ Partial Class Form1
         'txtclave
         '
         Me.txtclave.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtclave.Location = New System.Drawing.Point(197, 286)
+        Me.txtclave.Location = New System.Drawing.Point(177, 270)
         Me.txtclave.MaxLength = 4
         Me.txtclave.Name = "txtclave"
         Me.txtclave.Size = New System.Drawing.Size(53, 23)
@@ -156,7 +161,7 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label5.Location = New System.Drawing.Point(148, 257)
+        Me.Label5.Location = New System.Drawing.Point(128, 241)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 23)
         Me.Label5.TabIndex = 16
@@ -167,7 +172,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label6.Location = New System.Drawing.Point(147, 282)
+        Me.Label6.Location = New System.Drawing.Point(127, 266)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(45, 23)
         Me.Label6.TabIndex = 17
@@ -176,7 +181,7 @@ Partial Class Form1
         'txtapnmanual
         '
         Me.txtapnmanual.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtapnmanual.Location = New System.Drawing.Point(72, 383)
+        Me.txtapnmanual.Location = New System.Drawing.Point(52, 356)
         Me.txtapnmanual.MaxLength = 100
         Me.txtapnmanual.Name = "txtapnmanual"
         Me.txtapnmanual.Size = New System.Drawing.Size(271, 23)
@@ -187,7 +192,7 @@ Partial Class Form1
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe Script", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label7.Location = New System.Drawing.Point(38, 441)
+        Me.Label7.Location = New System.Drawing.Point(18, 393)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(156, 22)
         Me.Label7.TabIndex = 24
@@ -198,7 +203,7 @@ Partial Class Form1
         Me.cmbdistancia.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbdistancia.FormattingEnabled = True
         Me.cmbdistancia.Items.AddRange(New Object() {"500", "1000", "1500", "2000"})
-        Me.cmbdistancia.Location = New System.Drawing.Point(138, 470)
+        Me.cmbdistancia.Location = New System.Drawing.Point(118, 422)
         Me.cmbdistancia.Name = "cmbdistancia"
         Me.cmbdistancia.Size = New System.Drawing.Size(112, 24)
         Me.cmbdistancia.TabIndex = 25
@@ -208,7 +213,7 @@ Partial Class Form1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label8.Location = New System.Drawing.Point(38, 514)
+        Me.Label8.Location = New System.Drawing.Point(18, 448)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(147, 24)
         Me.Label8.TabIndex = 26
@@ -219,7 +224,7 @@ Partial Class Form1
         Me.cmbtiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbtiempo.FormattingEnabled = True
         Me.cmbtiempo.Items.AddRange(New Object() {"30", "60", "120"})
-        Me.cmbtiempo.Location = New System.Drawing.Point(138, 541)
+        Me.cmbtiempo.Location = New System.Drawing.Point(118, 475)
         Me.cmbtiempo.Name = "cmbtiempo"
         Me.cmbtiempo.Size = New System.Drawing.Size(112, 24)
         Me.cmbtiempo.TabIndex = 27
@@ -229,7 +234,7 @@ Partial Class Form1
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe Print", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label9.Location = New System.Drawing.Point(41, 575)
+        Me.Label9.Location = New System.Drawing.Point(21, 509)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(127, 26)
         Me.Label9.TabIndex = 29
@@ -240,7 +245,7 @@ Partial Class Form1
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe Print", 10.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label10.Location = New System.Drawing.Point(409, 141)
+        Me.Label10.Location = New System.Drawing.Point(20, 588)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(67, 24)
         Me.Label10.TabIndex = 31
@@ -248,39 +253,42 @@ Partial Class Form1
         '
         'Timer1
         '
-        Me.Timer1.Interval = 500
+        Me.Timer1.Interval = 660
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label2.Location = New System.Drawing.Point(393, 408)
+        Me.Label2.Location = New System.Drawing.Point(620, 161)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 240)
+        Me.Label2.Size = New System.Drawing.Size(98, 288)
         Me.Label2.TabIndex = 34
-        Me.Label2.Text = "PIN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "OPERADOR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DISTANCIA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "TIEMPO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PANICO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LINEA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CLAVE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LED" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VERSION" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SATELITES"
+        Me.Label2.Text = "PIN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "OPERADOR" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DISTANCIA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "TIEMPO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PANICO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LINEA MOV." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "CLAVE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LED" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VERSION" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SATELI" &
+    "TES" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LINEA 1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LINEA 2"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe Print", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label3.Location = New System.Drawing.Point(404, 21)
+        Me.Label3.Location = New System.Drawing.Point(289, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(419, 47)
+        Me.Label3.Size = New System.Drawing.Size(446, 47)
         Me.Label3.TabIndex = 36
-        Me.Label3.Text = "CONFIGURADOR SPIA V 3.5"
+        Me.Label3.Text = "CONFIGURADOR SPIA V 3.8.1"
         '
         'txttramarecibida
         '
+        Me.txttramarecibida.AllowDrop = True
+        Me.txttramarecibida.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txttramarecibida.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttramarecibida.Location = New System.Drawing.Point(746, 167)
+        Me.txttramarecibida.Location = New System.Drawing.Point(912, 161)
         Me.txttramarecibida.Multiline = True
         Me.txttramarecibida.Name = "txttramarecibida"
         Me.txttramarecibida.ReadOnly = True
         Me.txttramarecibida.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txttramarecibida.Size = New System.Drawing.Size(430, 484)
+        Me.txttramarecibida.Size = New System.Drawing.Size(415, 441)
         Me.txttramarecibida.TabIndex = 37
         Me.txttramarecibida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -289,7 +297,7 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label11.Location = New System.Drawing.Point(752, 134)
+        Me.Label11.Location = New System.Drawing.Point(969, 122)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(47, 28)
         Me.Label11.TabIndex = 40
@@ -298,9 +306,9 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe Print", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Segoe Print", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label12.Location = New System.Drawing.Point(408, 224)
+        Me.Label12.Location = New System.Drawing.Point(346, 124)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(140, 26)
         Me.Label12.TabIndex = 41
@@ -308,7 +316,7 @@ Partial Class Form1
         '
         'Timer2
         '
-        Me.Timer2.Interval = 13000
+        Me.Timer2.Interval = 14050
         '
         'btnlimpiarlog
         '
@@ -316,13 +324,12 @@ Partial Class Form1
         Me.btnlimpiarlog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.btnlimpiarlog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.btnlimpiarlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnlimpiarlog.Font = New System.Drawing.Font("Segoe Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnlimpiarlog.Font = New System.Drawing.Font("Segoe Print", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnlimpiarlog.Image = CType(resources.GetObject("btnlimpiarlog.Image"), System.Drawing.Image)
-        Me.btnlimpiarlog.Location = New System.Drawing.Point(1089, 657)
+        Me.btnlimpiarlog.Location = New System.Drawing.Point(924, 608)
         Me.btnlimpiarlog.Name = "btnlimpiarlog"
-        Me.btnlimpiarlog.Size = New System.Drawing.Size(111, 46)
+        Me.btnlimpiarlog.Size = New System.Drawing.Size(79, 53)
         Me.btnlimpiarlog.TabIndex = 44
-        Me.btnlimpiarlog.Text = "Limpiar"
         Me.btnlimpiarlog.UseVisualStyleBackColor = True
         '
         'btnoffled
@@ -333,7 +340,7 @@ Partial Class Form1
         Me.btnoffled.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnoffled.Font = New System.Drawing.Font("Segoe Print", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnoffled.Image = CType(resources.GetObject("btnoffled.Image"), System.Drawing.Image)
-        Me.btnoffled.Location = New System.Drawing.Point(597, 255)
+        Me.btnoffled.Location = New System.Drawing.Point(504, 154)
         Me.btnoffled.Name = "btnoffled"
         Me.btnoffled.Size = New System.Drawing.Size(104, 50)
         Me.btnoffled.TabIndex = 43
@@ -348,7 +355,7 @@ Partial Class Form1
         Me.btnonled.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnonled.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnonled.Image = CType(resources.GetObject("btnonled.Image"), System.Drawing.Image)
-        Me.btnonled.Location = New System.Drawing.Point(482, 256)
+        Me.btnonled.Location = New System.Drawing.Point(389, 155)
         Me.btnonled.Name = "btnonled"
         Me.btnonled.Size = New System.Drawing.Size(109, 47)
         Me.btnonled.TabIndex = 42
@@ -364,7 +371,7 @@ Partial Class Form1
         Me.btnencender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnencender.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnencender.Image = CType(resources.GetObject("btnencender.Image"), System.Drawing.Image)
-        Me.btnencender.Location = New System.Drawing.Point(197, 605)
+        Me.btnencender.Location = New System.Drawing.Point(177, 536)
         Me.btnencender.Name = "btnencender"
         Me.btnencender.Size = New System.Drawing.Size(89, 46)
         Me.btnencender.TabIndex = 38
@@ -374,7 +381,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(247, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(152, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(113, 86)
         Me.PictureBox1.TabIndex = 33
@@ -383,13 +390,14 @@ Partial Class Form1
         'btnfinalizarpanico
         '
         Me.btnfinalizarpanico.BackColor = System.Drawing.Color.Transparent
+        Me.btnfinalizarpanico.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnfinalizarpanico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.btnfinalizarpanico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.btnfinalizarpanico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.btnfinalizarpanico.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnfinalizarpanico.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnfinalizarpanico.Image = CType(resources.GetObject("btnfinalizarpanico.Image"), System.Drawing.Image)
-        Me.btnfinalizarpanico.Location = New System.Drawing.Point(541, 169)
+        Me.btnfinalizarpanico.Location = New System.Drawing.Point(66, 609)
         Me.btnfinalizarpanico.Name = "btnfinalizarpanico"
         Me.btnfinalizarpanico.Size = New System.Drawing.Size(96, 49)
         Me.btnfinalizarpanico.TabIndex = 32
@@ -405,7 +413,7 @@ Partial Class Form1
         Me.btnapagado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnapagado.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnapagado.Image = CType(resources.GetObject("btnapagado.Image"), System.Drawing.Image)
-        Me.btnapagado.Location = New System.Drawing.Point(87, 605)
+        Me.btnapagado.Location = New System.Drawing.Point(67, 536)
         Me.btnapagado.Name = "btnapagado"
         Me.btnapagado.Size = New System.Drawing.Size(88, 46)
         Me.btnapagado.TabIndex = 30
@@ -422,7 +430,7 @@ Partial Class Form1
         Me.btnapnmanual.Font = New System.Drawing.Font("Segoe Print", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnapnmanual.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnapnmanual.Image = CType(resources.GetObject("btnapnmanual.Image"), System.Drawing.Image)
-        Me.btnapnmanual.Location = New System.Drawing.Point(50, 329)
+        Me.btnapnmanual.Location = New System.Drawing.Point(30, 302)
         Me.btnapnmanual.Name = "btnapnmanual"
         Me.btnapnmanual.Size = New System.Drawing.Size(310, 45)
         Me.btnapnmanual.TabIndex = 23
@@ -438,7 +446,7 @@ Partial Class Form1
         Me.btntigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btntigo.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btntigo.Image = CType(resources.GetObject("btntigo.Image"), System.Drawing.Image)
-        Me.btntigo.Location = New System.Drawing.Point(218, 196)
+        Me.btntigo.Location = New System.Drawing.Point(198, 190)
         Me.btntigo.Name = "btntigo"
         Me.btntigo.Size = New System.Drawing.Size(95, 45)
         Me.btntigo.TabIndex = 13
@@ -454,7 +462,7 @@ Partial Class Form1
         Me.btnmovistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnmovistar.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnmovistar.Image = CType(resources.GetObject("btnmovistar.Image"), System.Drawing.Image)
-        Me.btnmovistar.Location = New System.Drawing.Point(49, 258)
+        Me.btnmovistar.Location = New System.Drawing.Point(29, 242)
         Me.btnmovistar.Name = "btnmovistar"
         Me.btnmovistar.Size = New System.Drawing.Size(99, 43)
         Me.btnmovistar.TabIndex = 12
@@ -470,7 +478,7 @@ Partial Class Form1
         Me.btnclaro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnclaro.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnclaro.Image = CType(resources.GetObject("btnclaro.Image"), System.Drawing.Image)
-        Me.btnclaro.Location = New System.Drawing.Point(53, 196)
+        Me.btnclaro.Location = New System.Drawing.Point(33, 190)
         Me.btnclaro.Name = "btnclaro"
         Me.btnclaro.Size = New System.Drawing.Size(93, 45)
         Me.btnclaro.TabIndex = 11
@@ -487,7 +495,7 @@ Partial Class Form1
         Me.enviardato.Font = New System.Drawing.Font("Segoe Print", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.enviardato.ForeColor = System.Drawing.SystemColors.Highlight
         Me.enviardato.Image = CType(resources.GetObject("enviardato.Image"), System.Drawing.Image)
-        Me.enviardato.Location = New System.Drawing.Point(524, 311)
+        Me.enviardato.Location = New System.Drawing.Point(416, 419)
         Me.enviardato.Name = "enviardato"
         Me.enviardato.Size = New System.Drawing.Size(144, 76)
         Me.enviardato.TabIndex = 2
@@ -504,7 +512,7 @@ Partial Class Form1
         Me.conectar.Font = New System.Drawing.Font("Segoe Print", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.conectar.ForeColor = System.Drawing.SystemColors.Highlight
         Me.conectar.Image = CType(resources.GetObject("conectar.Image"), System.Drawing.Image)
-        Me.conectar.Location = New System.Drawing.Point(1064, 89)
+        Me.conectar.Location = New System.Drawing.Point(1018, 12)
         Me.conectar.Name = "conectar"
         Me.conectar.Size = New System.Drawing.Size(143, 52)
         Me.conectar.TabIndex = 1
@@ -521,19 +529,71 @@ Partial Class Form1
         Me.determinarconecxion.Font = New System.Drawing.Font("Segoe Print", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.determinarconecxion.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.determinarconecxion.Image = CType(resources.GetObject("determinarconecxion.Image"), System.Drawing.Image)
-        Me.determinarconecxion.Location = New System.Drawing.Point(1065, 9)
+        Me.determinarconecxion.Location = New System.Drawing.Point(788, 12)
         Me.determinarconecxion.Name = "determinarconecxion"
         Me.determinarconecxion.Size = New System.Drawing.Size(140, 52)
         Me.determinarconecxion.TabIndex = 0
         Me.determinarconecxion.Text = "Check puerto"
         Me.determinarconecxion.UseVisualStyleBackColor = False
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe Print", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label13.Location = New System.Drawing.Point(347, 228)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(225, 26)
+        Me.Label13.TabIndex = 45
+        Me.Label13.Text = "LINEAS AUDIO EN CABINA"
+        '
+        'txtlinea1
+        '
+        Me.txtlinea1.Location = New System.Drawing.Point(420, 282)
+        Me.txtlinea1.Name = "txtlinea1"
+        Me.txtlinea1.Size = New System.Drawing.Size(128, 20)
+        Me.txtlinea1.TabIndex = 46
+        '
+        'txtlinea2
+        '
+        Me.txtlinea2.Location = New System.Drawing.Point(420, 327)
+        Me.txtlinea2.Name = "txtlinea2"
+        Me.txtlinea2.Size = New System.Drawing.Size(128, 20)
+        Me.txtlinea2.TabIndex = 47
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe Print", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label14.Location = New System.Drawing.Point(384, 277)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(35, 26)
+        Me.Label14.TabIndex = 48
+        Me.Label14.Text = "#1"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe Print", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label15.Location = New System.Drawing.Point(384, 322)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(35, 26)
+        Me.Label15.TabIndex = 49
+        Me.Label15.Text = "#2"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1219, 724)
+        Me.ClientSize = New System.Drawing.Size(1343, 689)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.txtlinea2)
+        Me.Controls.Add(Me.txtlinea1)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.btnlimpiarlog)
         Me.Controls.Add(Me.btnoffled)
         Me.Controls.Add(Me.btnonled)
@@ -619,4 +679,9 @@ Partial Class Form1
     Friend WithEvents btnoffled As Button
     Friend WithEvents Timer2 As Timer
     Friend WithEvents btnlimpiarlog As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtlinea1 As TextBox
+    Friend WithEvents txtlinea2 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
 End Class

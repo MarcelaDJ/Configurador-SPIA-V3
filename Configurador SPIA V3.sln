@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Configurador SPIA V3", "Configurador SPIA V3\Configurador SPIA V3.vbproj", "{4D025100-CC21-4417-B622-A812BA5F081F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupConfig", "SetupConfig\SetupConfig.vdproj", "{B8968A95-E377-484F-BF74-D867C18786F7}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup3.7", "Setup1\Setup1.vdproj", "{268D88F0-7282-4596-9E0F-4039D1903304}"
 EndProject
 Global
 	GlobalSection(Performance) = preSolution
@@ -20,8 +20,8 @@ Global
 		{4D025100-CC21-4417-B622-A812BA5F081F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D025100-CC21-4417-B622-A812BA5F081F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D025100-CC21-4417-B622-A812BA5F081F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8968A95-E377-484F-BF74-D867C18786F7}.Debug|Any CPU.ActiveCfg = Debug
-		{B8968A95-E377-484F-BF74-D867C18786F7}.Release|Any CPU.ActiveCfg = Release
+		{268D88F0-7282-4596-9E0F-4039D1903304}.Debug|Any CPU.ActiveCfg = Debug
+		{268D88F0-7282-4596-9E0F-4039D1903304}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
